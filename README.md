@@ -11,30 +11,38 @@ bash installer.sh
 ```
 By running the script you accept the terms of the MIT license.
 
-## Why should I switch from Windows 10 to Ubuntu
+## Why should I switch from Windows 10 to Ubuntu 20.04?
 
-Here are some of the main reasons I could think of why you should switch:
+Here are some of the main reasons I think people should switch:
  - Game development workflow improvements: you can use anything supported on Linux
- - WSL (Windows Subsystem for Linx) is good but has its shortcomings, including file curruption when accessing Linux files in file explorer.
- - Symlinks don't require admin permissions and can be created and managed easily
- - Creating and running bash scripts for automation is much easier on Linux - git-bash.exe is great but you can't install new software using apt.
+ - The more people that use the LinuxEditor the better it will get (more bug reports for Unity == more fixes, more resources, etc.)
+ - The NTFS URI 255 max path length restriction is a HUGE pain, this isn't really an issue for ext4, XFS, etc.
 
 Here are some reasons not to switch:
  - Not all software is supported on Linux - like Adobe Photoshop.
  - The LinuxEditor is likely not as fast as UnityEditor on Windows 10 even when using Vulkan
  - Linux graphics card drivers are typically not as good as their Windows 10 equivalents
+ - Graphical bugs in the LinuxEditor are common
+ - Crashes seem to be somewhat common, but seem to be just as common in the Windows 10 UnityEditor
 
-## What does this do?
+## What does this script do?
 
 This is a simple installer script to install the Unity Engine on Ubuntu 20.04. This script makes some assumptions about your system:
  - You are running Ubuntu 20.04 desktop
  - You have a 64-bit x86_64 PC (raspberry pi or other ARM based platforms are NOT supported)
  
-If you are doing any serious game development, I would highgly recommend having at least 16GB of ram and a dedicated graphics card. Make sure you install your video card drivers before launching Unity.
+The script does the following things:
+ - Installs the latest version of UnityHub for Linux
+ - Installs .NET from the official Microsoft source. This is required for JetBrains Rider.
+ - Creates a desktop file for the UnityHub so that it can be searched for in the Gnome desktop search
+ - Creates a `/opt/Unity` directory where UnityEditors should be installed so they can be accessed by all users
+ - Creates a `unity` group - any user in this group can run the installed UnityEditors and download new versions, updates, etc.
+ 
+If you are doing any serious game development, I would highgly recommend having at least 16GB of ram and a dedicated graphics card. Make sure you install your video card drivers.
  
 ## Post Install
  
-You should install all Editors in `/opt/Unity/Editors`. Also it is highly highly recommended to switch your current graphics API to Vulkan because it runs substantially better.
+You should install all Editors in `/opt/Unity/Editors`. Also it is highly highly recommended to switch your current graphics API to Vulkan because it runs substantially better. You can do this in `ProjectSettings/PlayerSettings/Other Settings`. Uncheck automatic Linux Graphics API and drag Vulkan above OpenGL. You can check to see if you are running Vulkan or OpenGL by looking at the title bar of the application window.
 
 Any user that needs to run Unity should belong to the `unity` group. You can add users to the `unity` group by doing this:
 
