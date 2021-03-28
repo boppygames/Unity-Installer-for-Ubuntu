@@ -15,7 +15,7 @@
 
 ## How do I run the script?
  
-You only need the installer script itself. To run the script, press Ctrl-Alt-T to bring up a termainal.
+You only need the installer script itself. To run the script, press Ctrl-Alt-T to bring up a terminal.
 Paste in these commands using Ctrl-Shift-V:
  
 ```
@@ -51,7 +51,7 @@ The script does the following things:
  - Creates a `/opt/Unity` directory where UnityEditors should be installed so they can be accessed by all users
  - Creates a `unity` group - any user in this group can run the installed UnityEditors and download new versions, updates, etc.
  
-If you are doing any serious game development, I would highgly recommend having at least 16GB of ram and a dedicated graphics card. Make sure you install your video card drivers.
+If you are doing any serious game development, I would highly recommend having at least 16GB of ram and a dedicated graphics card. Make sure you install your video card drivers.
  
 ## Post Install
  
