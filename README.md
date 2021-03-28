@@ -8,9 +8,10 @@
             alt="follow on Twitter"></a>
     <a href="https://www.twitch.tv/boppygames">
         <img alt="Twitch Status" src="https://img.shields.io/twitch/status/boppygames?style=social"></a>
+    <br><a href="https://store.steampowered.com/app/1384030/Boppio/">Checkout Boppio on Steam!</a>
 </p>
 
-Checkout Boppio on Steam! https://store.steampowered.com/app/1384030/Boppio/
+
 
 ## How do I run the script?
  
