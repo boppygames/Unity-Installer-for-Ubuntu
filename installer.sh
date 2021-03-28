@@ -71,8 +71,8 @@ Keywords=3d;cg;animation;rendering;render engine;game engine;unity;hub;" > /tmp/
 sudo mv /tmp/unity.desktop /usr/share/applications/
 
 # Download an icon to use for the desktop launcher
-wget 'https://i.redd.it/estpv0c6iw841.jpg' -O /tmp/unity-icon.jpg
-sudo mv /tmp/unity-icon.jpg /usr/share/icons
+wget 'https://github.com/boppygames/Unity-Installer-for-Ubuntu/blob/d2e462aae8ea0b2f3e3cdcc40153cf4282c68c0c/unity-icon.png' -O /tmp/unity-icon.png
+sudo mv /tmp/unity-icon.png /usr/share/icons
 
 echo "The installation process was successful."
 echo "Please restart your PC!"
