@@ -22,6 +22,8 @@
 
 set -eou pipefail
 
+ICON_URL='https://github.com/boppygames/Unity-Installer-for-Ubuntu/raw/main/unity-icon.png'
+
 echo "Unity3D Installer Version 0.1"
 echo "Notice: This script is provided without a warranty, check license before use."
 echo "Notice: Boppy Games, LLC is not affiliated with Unity."
@@ -66,12 +68,12 @@ Exec=/opt/Unity/Hub/UnityHub.AppImage
 Terminal=false
 Type=Application
 Categories=Development;Graphics;IDE;
-Icon=/opt/Unity/Hub/unity-icon
+Icon=/usr/share/icons/unity-icon.png
 Keywords=3d;cg;animation;rendering;render engine;game engine;unity;hub;" > /tmp/unity.desktop
 sudo mv /tmp/unity.desktop /usr/share/applications/
 
 # Download an icon to use for the desktop launcher
-wget 'https://github.com/boppygames/Unity-Installer-for-Ubuntu/blob/d2e462aae8ea0b2f3e3cdcc40153cf4282c68c0c/unity-icon.png' -O /tmp/unity-icon.png
+wget "$ICON_URL" -O /tmp/unity-icon.png
 sudo mv /tmp/unity-icon.png /usr/share/icons
 
 echo "The installation process was successful."
