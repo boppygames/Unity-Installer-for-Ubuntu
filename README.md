@@ -55,7 +55,9 @@ If you are doing any serious game development, I would highly recommend having a
  
 ## Post Install
  
-You should install all Editors in `/opt/Unity/Editors`. Also it is highly highly recommended to switch your current graphics API to Vulkan because it runs substantially better. You can do this in `ProjectSettings/PlayerSettings/Other Settings`. Uncheck automatic Linux Graphics API and drag Vulkan above OpenGL. You can check to see if you are running Vulkan or OpenGL by looking at the title bar of the application window.
+**Important: You should install all Editors in `/opt/Unity/Editors`**. 
+
+Also it is highly highly recommended to switch your current graphics API to Vulkan because it runs substantially better. You can do this in `ProjectSettings/PlayerSettings/Other Settings`. Uncheck automatic Linux Graphics API and drag Vulkan above OpenGL. You can check to see if you are running Vulkan or OpenGL by looking at the title bar of the application window.
 
 Any user that needs to run Unity should belong to the `unity` group. You can add users to the `unity` group by doing this:
 
